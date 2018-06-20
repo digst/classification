@@ -1,4 +1,4 @@
-#+ summary: Hent alle Begreber (skos:Concept) på serveren	-sidestørrelse 100 paginer 	med ?page=x
+#+ summary: Hent alle Begreber (skos:Concept) på serveren
 #+ endpoint: http://skos.um.es/sparql/		
 #+ tags:		
 #+   - SPARQL		
