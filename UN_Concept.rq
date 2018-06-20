@@ -1,0 +1,48 @@
+
+#+ summary: Hent begreb (skos:Concept) med en givn URI (brug ?concepturi=URI)
+#+ endpoint: http://skos.um.es/sparql/
+#+ tags:		
+#+   - SPARQL		
+#+   - SKOS
+#+ enumerate:		
+#+   - concepturi		
+
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+CONSTRUCT {?_concepturi rdf:type  ?type . 
+	?_concepturi skos:inScheme ?skema .
+	?_concepturi skos:prefLabel ?prefLabel .
+	?_concepturi skos:altLabel ?altLabel .
+	?_concepturi skos:definition ?definition .
+	?_concepturi skos:example ?example .
+	?_concepturi skos:hiddenLabel ?hiddenLabel .
+	?_concepturi skos:changeNote ?changeNote .
+	?_concepturi skos:editorialNote ?editorialNote .
+	?_concepturi skos:topConceptOf ?topConceptOf .
+	?_concepturi skos:related ?related .
+	?_concepturi skos:narrower ?narrover .
+	?_concepturi skos:broader ?broader .
+	?_concepturi skos:relatedMatch ?relatedMatch .
+	?_concepturi skos:closeMatch ?closeMatch .
+	?_concepturi skos:exactMatch ?exactMatch .
+	?_concepturi skos:broaderMatch ?broaderMatch .
+	?_concepturi skos:narrowerMatch ?narrowerMatch}
+WHERE {?_concepturi rdf:type skos:Concept .
+	OPTIONAL {?_concepturi skos:prefLabel ?prefLabel}
+	OPTIONAL {?_concepturi skos:altLabel ?altLabel}
+	OPTIONAL {?_concepturi skos:definition ?definition}
+	OPTIONAL {?_concepturi skos:example ?example}
+	OPTIONAL {?_concepturi skos:hiddenLabel ?hiddenLabel}
+	OPTIONAL {?_concepturi skos:changeNote ?changeNote}
+	OPTIONAL {?_concepturi skos:editorialNote ?editorialNote}
+	OPTIONAL {?_concepturi skos:topConceptOf ?topConceptOf}
+	OPTIONAL {?_concepturi skos:related ?related}
+	OPTIONAL {?_concepturi skos:narrower ?narrover}
+	OPTIONAL {?_concepturi skos:broader ?broader}
+	OPTIONAL {?_concepturi skos:relatedMatch ?relatedMatch}
+	OPTIONAL {?_concepturi skos:closeMatch ?closeMatch}
+	OPTIONAL {?_concepturi skos:exactMatch ?exactMatch}
+	OPTIONAL {?_concepturi skos:broaderMatch ?broaderMatch}
+	OPTIONAL {?_concepturi skos:narrowerMatch ?narrowerMatch}
+	OPTIONAL {?_concepturi skos:inScheme ?skema}
+	OPTIONAL {?_concepturi rdf:type  ?type} 
+}

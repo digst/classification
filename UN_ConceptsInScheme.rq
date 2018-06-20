@@ -1,0 +1,49 @@
+
+#+ summary: Find begreber (skos:Concept som er inScheme et givet ConceptScheme (brug ?scheme=URI)
+#+ endpoint: http://skos.um.es/sparql/
+#+ tags:		
+#+   - SPARQL		
+#+ enumerate:		
+#+   - scheme		
+
+
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+CONSTRUCT {?noget rdf:type  ?type . 
+?noget skos:inScheme ?skema .
+?noget skos:prefLabel ?prefLabel .
+?noget skos:altLabel ?altLabel .
+?noget skos:definition ?definition .
+?noget skos:example ?example .
+?noget skos:hiddenLabel ?hiddenLabel .
+?noget skos:changeNote ?changeNote .
+?noget skos:editorialNote ?editorialNote .
+?noget skos:topConceptOf ?topConceptOf .
+?noget skos:related ?related .
+?noget skos:narrower ?narrover .
+?noget skos:broader ?broader .
+?noget skos:relatedMatch ?relatedMatch .
+?noget skos:closeMatch ?closeMatch .
+?noget skos:exactMatch ?exactMatch .
+?noget skos:broaderMatch ?broaderMatch .
+?noget skos:narrowerMatch ?narrowerMatch}
+WHERE {?noget skos:inScheme ?_scheme_iri.
+OPTIONAL {?noget skos:prefLabel ?prefLabel}
+OPTIONAL {?noget skos:altLabel ?altLabel}
+OPTIONAL {?noget skos:definition ?definition}
+OPTIONAL {?noget skos:example ?example}
+OPTIONAL {?noget skos:hiddenLabel ?hiddenLabel}
+OPTIONAL {?noget skos:changeNote ?changeNote}
+OPTIONAL {?noget skos:editorialNote ?editorialNote}
+OPTIONAL {?noget skos:topConceptOf ?topConceptOf}
+OPTIONAL {?noget skos:related ?related}
+OPTIONAL {?noget skos:narrower ?narrover}
+OPTIONAL {?noget skos:broader ?broader}
+OPTIONAL {?noget skos:relatedMatch ?relatedMatch}
+OPTIONAL {?noget skos:closeMatch ?closeMatch}
+OPTIONAL {?noget skos:exactMatch ?exactMatch}
+OPTIONAL {?noget skos:broaderMatch ?broaderMatch}
+OPTIONAL {?noget skos:narrowerMatch ?narrowerMatch}
+OPTIONAL {?noget skos:inScheme ?skema}
+OPTIONAL {?noget rdf:type  ?type} 
+
+}
