@@ -44,3 +44,4 @@ WHERE {?noget rdf:type skos:Concept .
 	OPTIONAL {?noget rdf:type  ?type} 
 
 }
+LIMIT 200
