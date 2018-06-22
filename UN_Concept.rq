@@ -45,3 +45,4 @@ WHERE {?_concepturi_iri rdf:type skos:Concept .
 	OPTIONAL {?_concepturi_iri skos:narrowerMatch ?narrowerMatch}
 	OPTIONAL {?_concepturi_iri skos:inScheme ?skema}
 	OPTIONAL {?_concepturi_iri rdf:type  ?type} 
+}
