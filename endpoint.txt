@@ -1,1 +1,1 @@
-http://skos.um.es/sparql/
+http://api11.kle-online.dk:8084/rdf4j-server/repositories/grunddata
