@@ -1,6 +1,5 @@
 
 #+ summary: Find begreber (skos:Concept som er inScheme et givet ConceptScheme (brug ?scheme=URI)
-#+ endpoint: http://skos.um.es/sparql/
 #+ tags:		
 #+   - SPARQL		
 #+ enumerate:		
