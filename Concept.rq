@@ -1,6 +1,5 @@
 
 #+ summary: Hent begreb (skos:Concept) med en givn URI (brug ?concepturi=URI)
-#+ endpoint: http://skos.um.es/sparql/
 #+ tags:		
 #+   - SPARQL		
 #+   - SKOS
