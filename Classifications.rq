@@ -1,7 +1,4 @@
 #+ summary: Find alle klassifikationer på serveren - i dette tilfælde alle skos:ConceptScheme		
-#+ endpoint: http://skos.um.es/sparql/	
-#+ tags:		
-#+   - SPARQL		
 
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 CONSTRUCT {?noget rdf:type  ?type . 
