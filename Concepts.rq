@@ -1,5 +1,4 @@
-#+ summary: Hent alle Begreber (skos:Concept) på serveren
-#+ endpoint: http://skos.um.es/sparql/		
+#+ summary: Hent alle Begreber (skos:Concept) på serveren	
 #+ tags:		
 #+   - SPARQL		
 #+ method: GET
