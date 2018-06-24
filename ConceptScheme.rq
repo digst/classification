@@ -1,5 +1,4 @@
 #+ summary: Hent begrebssystem (skos:ConceptScheme) med en givn URI (brug ?schemeuri=URI)
-#+ endpoint: http://skos.um.es/sparql/
 #+ tags:		
 #+   - SPARQL		
 #+   - SKOS
@@ -9,7 +8,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 CONSTRUCT {?_schemeuri_iri rdf:type  ?type . 
 	?_schemeuri_iri skos:prefLabel ?prefLabel .
 	?_schemeuri_iri skos:altLabel ?altLabel .
-	?_schemeuri_iriskos:definition ?definition .
+	?_schemeuri_iri skos:definition ?definition .
 	?_schemeuri_iri skos:example ?example .
 	?_schemeuri_iri skos:hiddenLabel ?hiddenLabel .
 	?_schemeuri_iri skos:changeNote ?changeNote .
