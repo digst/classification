@@ -2,7 +2,6 @@
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 CONSTRUCT {
 	{
-
 ?noget rdf:type  ?type . 
 ?noget skos:inScheme ?skema .
 ?noget skos:prefLabel ?prefLabel .
@@ -20,9 +19,7 @@ CONSTRUCT {
 ?noget skos:closeMatch ?closeMatch .
 ?noget skos:exactMatch ?exactMatch .
 ?noget skos:broaderMatch ?broaderMatch .
-?noget skos:narrowerMatch ?narrowerMatch
-
-          }
+?noget skos:narrowerMatch ?narrowerMatch }
 WHERE 
 {?noget skos:inScheme ?_schemeuri_iri.
 OPTIONAL {?noget skos:prefLabel ?prefLabel}
