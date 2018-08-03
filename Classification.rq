@@ -1,6 +1,30 @@
 #+ summary: Find begreber og deres skemaa (skos:ConceptScheme instansen samt samt skos:Concepts som er inScheme et givet ConceptScheme (brug ?schemeuri=URI)
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 CONSTRUCT 
+	{	
+	?_schemeuri_iri rdf:type  ?type . 
+?_schemeuri_iri skos:prefLabel ?prefLabel .
+?_schemeuri_iri skos:altLabel ?altLabel .
+?_schemeuri_iri skos:definition ?definition .
+?_schemeuri_iri skos:example ?example .
+?_schemeuri_iri skos:hiddenLabel ?hiddenLabel .
+?_schemeuri_iri skos:changeNote ?changeNote .
+?_schemeuri_iri skos:hasTopConcept ?hasTopConcept .
+?_schemeuri_iri skos:editorialNote ?editorialNote 
+		}
+	WHERE
+{?_schemeuri_iri rdf:type skos:ConceptScheme .
+	OPTIONAL {?_schemeuri_iri skos:prefLabel ?prefLabel}
+	OPTIONAL {?_schemeuri_iri skos:altLabel ?altLabel}
+	OPTIONAL {?_schemeuri_iri skos:definition ?definition}
+	OPTIONAL {?_schemeuri_iri skos:example ?example}
+	OPTIONAL {?_schemeuri_iri skos:hiddenLabel ?hiddenLabel}
+	OPTIONAL {?_schemeuri_iri skos:changeNote ?changeNote}
+	OPTIONAL {?_schemeuri_iri skos:editorialNote ?editorialNote}
+	OPTIONAL {?_schemeuri_iri skos:hasTopConcept ?hasTopConcept}
+	OPTIONAL {?_schemeuri_iri rdf:type  ?type} 
+}
+CONSTRUCT 
 	{
 ?noget rdf:type  ?type . 
 ?noget skos:inScheme ?skema .
@@ -41,29 +65,6 @@ OPTIONAL {?noget skos:narrowerMatch ?narrowerMatch}
 OPTIONAL {?noget skos:inScheme ?skema}
 OPTIONAL {?noget rdf:type  ?type} 
 }
-UNION
-CONSTRUCT 
-	{	
-	?_schemeuri_iri rdf:type  ?type . 
-?_schemeuri_iri skos:prefLabel ?prefLabel .
-?_schemeuri_iri skos:altLabel ?altLabel .
-?_schemeuri_iri skos:definition ?definition .
-?_schemeuri_iri skos:example ?example .
-?_schemeuri_iri skos:hiddenLabel ?hiddenLabel .
-?_schemeuri_iri skos:changeNote ?changeNote .
-?_schemeuri_iri skos:hasTopConcept ?hasTopConcept .
-?_schemeuri_iri skos:editorialNote ?editorialNote 
-		}
-	WHERE
-{?_schemeuri_iri rdf:type skos:ConceptScheme .
-	OPTIONAL {?_schemeuri_iri skos:prefLabel ?prefLabel}
-	OPTIONAL {?_schemeuri_iri skos:altLabel ?altLabel}
-	OPTIONAL {?_schemeuri_iri skos:definition ?definition}
-	OPTIONAL {?_schemeuri_iri skos:example ?example}
-	OPTIONAL {?_schemeuri_iri skos:hiddenLabel ?hiddenLabel}
-	OPTIONAL {?_schemeuri_iri skos:changeNote ?changeNote}
-	OPTIONAL {?_schemeuri_iri skos:editorialNote ?editorialNote}
-	OPTIONAL {?_schemeuri_iri skos:hasTopConcept ?hasTopConcept}
-	OPTIONAL {?_schemeuri_iri rdf:type  ?type} 
-}
+
+
 
