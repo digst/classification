@@ -1,6 +1,6 @@
 #+ summary: Find begreber og deres skemaa (skos:ConceptScheme instansen samt samt skos:Concepts som er inScheme et givet ConceptScheme (brug ?schemeuri=URI)
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-CONSTRUCT {
+CONSTRUCT 
 	{
 ?noget rdf:type  ?type . 
 ?noget skos:inScheme ?skema .
@@ -40,5 +40,5 @@ OPTIONAL {?noget skos:broaderMatch ?broaderMatch}
 OPTIONAL {?noget skos:narrowerMatch ?narrowerMatch}
 OPTIONAL {?noget skos:inScheme ?skema}
 OPTIONAL {?noget rdf:type  ?type} 
-}}
+}
 
