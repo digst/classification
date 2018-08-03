@@ -2,7 +2,17 @@
 
 
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-CONSTRUCT {?noget rdf:type  ?type . 
+CONSTRUCT {
+	 ?_schemeuri_iri rdf:type  ?type . 
+	?_schemeuri_iri skos:prefLabel ?prefLabel .
+	?_schemeuri_iri skos:altLabel ?altLabel .
+	?_schemeuri_iri skos:definition ?definition .
+	?_schemeuri_iri skos:example ?example .
+	?_schemeuri_iri skos:hiddenLabel ?hiddenLabel .
+	?_schemeuri_iri skos:changeNote ?changeNote .
+	?_schemeuri_iri skos:hasTopConcept ?hasTopConcept .
+	?_schemeuri_iri skos:editorialNote ?editorialNote 
+	?noget rdf:type  ?type . 
 ?noget skos:inScheme ?skema .
 ?noget skos:prefLabel ?prefLabel .
 ?noget skos:altLabel ?altLabel .
@@ -20,17 +30,10 @@ CONSTRUCT {?noget rdf:type  ?type .
 ?noget skos:exactMatch ?exactMatch .
 ?noget skos:broaderMatch ?broaderMatch .
 ?noget skos:narrowerMatch ?narrowerMatch
- ?_schemeuri_iri rdf:type  ?type . 
-	?_schemeuri_iri skos:prefLabel ?prefLabel .
-	?_schemeuri_iri skos:altLabel ?altLabel .
-	?_schemeuri_iri skos:definition ?definition .
-	?_schemeuri_iri skos:example ?example .
-	?_schemeuri_iri skos:hiddenLabel ?hiddenLabel .
-	?_schemeuri_iri skos:changeNote ?changeNote .
-	?_schemeuri_iri skos:hasTopConcept ?hasTopConcept .
-	?_schemeuri_iri skos:editorialNote ?editorialNote 
+
           }
-WHERE {?noget skos:inScheme ?_schemeuri_iri.
+WHERE {
+{?noget skos:inScheme ?_schemeuri_iri.
 OPTIONAL {?noget skos:prefLabel ?prefLabel}
 OPTIONAL {?noget skos:altLabel ?altLabel}
 OPTIONAL {?noget skos:definition ?definition}
@@ -51,7 +54,7 @@ OPTIONAL {?noget skos:inScheme ?skema}
 OPTIONAL {?noget rdf:type  ?type} 
 }
 UNION
-WHERE {?_schemeuri_iri rdf:type skos:ConceptScheme .
+{?_schemeuri_iri rdf:type skos:ConceptScheme .
 	OPTIONAL {?_schemeuri_iri skos:prefLabel ?prefLabel}
 	OPTIONAL {?_schemeuri_iri skos:altLabel ?altLabel}
 	OPTIONAL {?_schemeuri_iri skos:definition ?definition}
@@ -62,5 +65,5 @@ WHERE {?_schemeuri_iri rdf:type skos:ConceptScheme .
 	OPTIONAL {?_schemeuri_iri skos:hasTopConcept ?hasTopConcept}
 	OPTIONAL {?_schemeuri_iri rdf:type  ?type} 
 }
-CONSTRUCT 
+
 	}
