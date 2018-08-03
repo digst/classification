@@ -11,7 +11,7 @@ CONSTRUCT {
 	?_schemeuri_iri skos:hiddenLabel ?hiddenLabel .
 	?_schemeuri_iri skos:changeNote ?changeNote .
 	?_schemeuri_iri skos:hasTopConcept ?hasTopConcept .
-	?_schemeuri_iri skos:editorialNote ?editorialNote 
+	?_schemeuri_iri skos:editorialNote ?editorialNote .
 	?noget rdf:type  ?type . 
 ?noget skos:inScheme ?skema .
 ?noget skos:prefLabel ?prefLabel .
