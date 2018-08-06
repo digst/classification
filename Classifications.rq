@@ -1,4 +1,4 @@
-#+summary: Find alle klassifikationer på serveren - i dette tilfælde alle skos:ConceptScheme (brug ?schemeuri=URI)
+#+summary: Find alle klassifikationer på serveren - i dette tilfælde alle skos:ConceptScheme
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 CONSTRUCT {?noget rdf:type  ?type . 
        ?noget skos:prefLabel ?prefLabel .
