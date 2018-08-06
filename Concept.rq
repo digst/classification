@@ -1,11 +1,5 @@
 
 #+ summary: Hent begreb (skos:Concept) med en givn URI (brug ?concepturi=URI)
-#+ tags:		
-#+   - SPARQL		
-#+   - SKOS
-#+ enumerate:		
-#+   - concepturi		
-
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 CONSTRUCT {?_concepturi_iri rdf:type  ?type . 
 	?_concepturi_iri skos:inScheme ?skema .
