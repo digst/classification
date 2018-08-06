@@ -1,8 +1,4 @@
 #+ summary: Hent alle Begreber (skos:Concept) på serveren	
-#+ tags:		
-#+   - SPARQL		
-#+ method: GET
-#+ pagination: 50
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 CONSTRUCT {?noget rdf:type  ?type . 
 	?noget skos:inScheme ?skema .
