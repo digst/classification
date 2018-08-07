@@ -1,5 +1,7 @@
 #+ summary: Hent begreb (skos:Concept) med en givn URI (brug ?concepturi=URI)
+
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
 CONSTRUCT {?_concepturi_iri rdf:type  ?type . 
 	?_concepturi_iri skos:inScheme ?skema .
 	?_concepturi_iri skos:prefLabel ?prefLabel .
