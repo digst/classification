@@ -1,4 +1,4 @@
-#+ summary: Hent alle Begreber (skos:Concept) på serveren
+#+ summary: Hent alle Begreber (instanser af skos:Concept) på serveren
 
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 CONSTRUCT {?noget rdf:type  ?type . 
