@@ -1,4 +1,4 @@
-#+ summary: [under udvikling] Find begreber og deres skema (skos:ConceptScheme instansen samt samt skos:Concepts som er inScheme et givet ConceptScheme (brug ?schemeuri=URI)
+#+ summary: under udvikling Find begreber og deres skema (skos:ConceptScheme instansen samt samt skos:Concepts som er inScheme et givet ConceptScheme (brug ?schemeuri=URI)
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 CONSTRUCT WHERE
 {?_schemeuri_iri rdf:type skos:ConceptScheme 
