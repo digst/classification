@@ -1,4 +1,4 @@
-#+ summary: Find begreber (skos:Concept som er inScheme et givet ConceptScheme) (brug ?scheme=[URI])
+#+ summary: Find begreber (skos:Concept som er inScheme et givet ConceptScheme) (brug ?scheme=URI)
 
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 CONSTRUCT {?noget rdf:type  ?type . 
@@ -7,7 +7,7 @@ CONSTRUCT {?noget rdf:type  ?type .
 ?noget skos:altLabel ?altLabel .
 ?noget skos:definition ?definition .
 ?noget skos:example ?example .
-?noget skos:hiddenLabel ?hiddenLabel .
+?noget skos:hiddenLabel ?hiddenLabel 
 ?noget skos:changeNote ?changeNote .
 ?noget skos:editorialNote ?editorialNote .
 ?noget skos:topConceptOf ?topConceptOf .
