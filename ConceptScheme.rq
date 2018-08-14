@@ -1,4 +1,4 @@
-#+ summary: Hent begrebssystem (instans af skos:ConceptScheme) med en givn URI (brug ?schemeuri=[URI])
+#+ summary: Hent begrebssystem (instans af skos:ConceptScheme) med en givn URI (brug ?schemeuri=URI)
 		
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 CONSTRUCT {?_schemeuri_iri rdf:type  ?type . 
