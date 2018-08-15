@@ -1,4 +1,4 @@
-#+ summary: Hent begreb (instans af  skos:Concept) med en givn URI (brug ?concepturi=URI)
+#+ summary: Hent begreb (instans af  skos:Concept) med en givn URI (brug ?concepturi=<URI>)
 
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
