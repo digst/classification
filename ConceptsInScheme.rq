@@ -1,4 +1,4 @@
-#+ summary: Find begreber (skos:Concept som er inScheme et givet ConceptScheme) (brug ?schemeuri=<URI>)
+#+ summary: Find begreber (skos:Concept som er inScheme et givet ConceptScheme) 
 
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
