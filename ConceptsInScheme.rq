@@ -19,7 +19,7 @@ CONSTRUCT {?noget rdf:type  ?type .
 ?noget skos:exactMatch ?exactMatch .
 ?noget skos:broaderMatch ?broaderMatch .
 ?noget skos:narrowerMatch ?narrowerMatch}
-WHERE {?noget skos:inScheme ?_schemeuri_iri.
+WHERE {?noget skos:inScheme ?_schemeuri_iri .
 OPTIONAL {?noget skos:prefLabel ?prefLabel}
 OPTIONAL {?noget skos:altLabel ?altLabel}
 OPTIONAL {?noget skos:definition ?definition}
